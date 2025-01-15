@@ -3,8 +3,8 @@ title               : Kitter
 subtitle            : A demo pet shop ecommerce website
 description         : >-
                       This is a demo eCommerce pet shop website to demonstrate MCP features
-baseurl             : ""                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : gauravchafe/gauravchafe.github.io   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+baseurl             : "/mcpdemo"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+repository          : gauravchafe/gauravchafe.github.io/   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : yousinix/portfolYOU@v2.3.0
 open_new_tab        : true                     # Opens external URLs in new tab (works for posts, projects and navbar only)
 
