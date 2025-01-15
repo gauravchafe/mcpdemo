@@ -4,7 +4,7 @@
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
 
-<footer class="mt-auto py-3 text-center footer" style="background-image: url('./assets/images/footer-bg.jpg')">
+<footer class="mt-auto py-3 text-center">
 
   
   <div class="footer-top section">
