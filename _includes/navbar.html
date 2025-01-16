@@ -1,7 +1,7 @@
-<header data-bs-theme="light">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand logo" href="{{ site.baseurl }}/">Carousel</a>
+      <a class="navbar-brand logo" href="{{ site.baseurl }}/">{{ title }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,24 +47,11 @@
           </li>
         {% endfor %}
         <span class="navbar-text">
-          <div class="header-actions">
-            <button class="action-btn" aria-label="Search">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-            </button>
-
-            <button class="action-btn user" aria-label="User">
-              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-            </button>
-
-            <button class="action-btn" aria-label="cart">
-              <ion-icon
-                name="bag-handle-outline"
-                aria-hidden="true"
-              ></ion-icon>
-
-              <span class="btn-badge">0</span>
-            </button>
-          </div>
+          <span class="header-actions">
+            <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
+            <button type="button" class="btn btn-outline-light"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon></button>
+            <span class="btn-badge">0</span>
+          </span>
         </span>
       </div>
     </div>
