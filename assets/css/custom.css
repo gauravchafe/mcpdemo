@@ -126,11 +126,11 @@ address { font-style: normal; }
   background-position: center;
 }
 
-.logo {
+.logo h5{
   font-family: var(--ff-bangers);
   font-weight: var(--fw-400);
   letter-spacing: 1px;
-  color: var(--white);
+  color: #fff;
 }
 
 .h1,
