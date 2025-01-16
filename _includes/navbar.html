@@ -18,8 +18,8 @@
           <i class="fas fa-1x fa-bars text-themed"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <div class="navbar-nav me-auto mb-2 mb-lg-0">
             {%- assign html_pages = site.html_pages | sort: 'weight' -%}
             {%- assign filtered_pages = "" | split: "" -%}
       
@@ -54,9 +54,11 @@
               {%- else -%}
                 {%- assign url = html_page.url | relative_url -%}
               {%- endif -%}
-            <a class="nav-item nav-link {{ active_status }}" href="{{ url }}"
+              <li class="nav-item">
+                <a class="nav-item nav-link {{ active_status }}" href="{{ url }}"
               {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
               >{{ html_page.title }}</a>
+              </li>
             {% endfor %}
 
             <span class="navbar-text">

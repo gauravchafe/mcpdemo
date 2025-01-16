@@ -131,6 +131,7 @@ address { font-style: normal; }
   font-weight: var(--fw-400);
   letter-spacing: 1px;
   color: #fff;
+  font-size: 2.8rem;
 }
 
 .h1,
