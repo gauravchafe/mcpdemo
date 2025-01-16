@@ -5,6 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
       {%- assign html_pages = site.html_pages | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
@@ -39,19 +40,21 @@
         {%- else -%}
           {%- assign url = html_page.url | relative_url -%}
         {%- endif -%}
+        <li class="nav-item">
           <a class="nav-item {{ active_status }}" href="{{ url }}"
-        {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
-        >{{ html_page.title }}</a>
+          {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
+          >{{ html_page.title }}</a>
+        </li>
       {% endfor %}
+      </ul>
       <span class="navbar-text">
         <span class="header-actions">
           <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
           <button type="button" class="btn btn-outline-light position-relative"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon>
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              99+
+              0
               <span class="visually-hidden">items added</span>
             </span>
-          
           </button>
         </span>
       </span>
