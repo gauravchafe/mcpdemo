@@ -40,7 +40,7 @@
           {%- assign url = html_page.url | relative_url -%}
         {%- endif -%}
         <li class="nav-item">
-          <a class="nav-item nav-link {{ active_status }}" href="{{ url }}"
+          <a class="nav-item {{ active_status }}" href="{{ url }}"
         {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
         >{{ html_page.title }}</a>
         </li>
