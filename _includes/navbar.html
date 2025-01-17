@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-themed p-4">
 
-  <a class="navbar-brand" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
+  <a class="navbar-brand logo font-bangers" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
@@ -55,7 +55,15 @@
 
       {% endfor %}
 
-      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+      <div class="">
+        <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
+        <button type="button" class="btn btn-outline-light position-relative"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+            <span class="visually-hidden">items added</span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 
