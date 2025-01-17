@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand logo font-bangers" href="{{ site.baseurl }}/">{{ title }}</a>
+    <a class="navbar-brand logo font-bangers col-lg-3 me-0" href="{{ site.baseurl }}/">{{ title }}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse d-lg-flex" id="navbarScroll">
+      <ul class="navbar-nav col-lg-6 justify-content-lg-center navbar-nav-scroll" style="--bs-scroll-height: 100px;">
       {%- assign html_pages = site.html_pages | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
@@ -47,17 +47,15 @@
         </li>
       {% endfor %}
       </ul>
-      <span class="navbar-text d-flex">
-        <span class="header-actions">
-          <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
-          <button type="button" class="btn btn-outline-light position-relative"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              0
-              <span class="visually-hidden">items added</span>
-            </span>
-          </button>
-        </span>
-      </span>
+      <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+        <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
+        <button type="button" class="btn btn-outline-light position-relative"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+            <span class="visually-hidden">items added</span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </nav>
