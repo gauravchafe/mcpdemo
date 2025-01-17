@@ -1,17 +1,23 @@
-<nav class="navbar navbar-expand-lg bg-body-primary">
-  <div class="container">
-    <a class="navbar-brand logo font-bangers col-lg-3 me-0" href="{{ site.baseurl }}/">{{ title }}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse d-lg-flex" id="navbarScroll">
-      <ul class="navbar-nav col-lg-6 justify-content-lg-center navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+<nav class="navbar navbar-expand-lg navbar-themed p-4">
+
+  <a class="navbar-brand" href="{{ site.baseurl }}/"><h5><b>{{ site.title }}</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+
       {%- assign html_pages = site.html_pages | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
       {%- for html_page in html_pages -%} 
+
         {%- assign exclude = false -%}
+
         {%- for exclude_path in site.nav_exclude -%}
+
           {%- if exclude_path == html_page.path -%}
             {%- assign exclude = true -%}
             {%- break -%}
@@ -22,13 +28,17 @@
               {%- break -%}
             {%- endif -%}
           {%- endif -%}
+
         {%- endfor -%}
+
         {%- unless exclude -%}
           {%- assign filtered_pages = filtered_pages | push: html_page -%}
         {%- endunless -%}
+
       {%- endfor -%}
 
       {% for html_page in filtered_pages %}  
+
         {%- if page.url contains html_page.url -%}
           {%- assign active_status = "active" -%}
         {%- else -%}
@@ -40,22 +50,14 @@
         {%- else -%}
           {%- assign url = html_page.url | relative_url -%}
         {%- endif -%}
-        <li class="nav-item">
-          <a class="nav-item {{ active_status }}" href="{{ url }}"
-          {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}
-          >{{ html_page.title }}</a>
-        </li>
+
+        <a class="nav-item nav-link {{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}>{{ html_page.title }}</a>
+
       {% endfor %}
-      </ul>
-      <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-        <button type="button" class="btn btn-outline-light"><ion-icon name="person-outline" aria-hidden="true" aria-label="User"></ion-icon></button>
-        <button type="button" class="btn btn-outline-light position-relative"><ion-icon name="bag-handle-outline" aria-hidden="true"aria-label="cart"></ion-icon>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            0
-            <span class="visually-hidden">items added</span>
-          </span>
-        </button>
-      </div>
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
     </div>
   </div>
+
 </nav>
+<div class="banner" style="background-image: url('https://profile.digital.salesforce.com/images/u/default/golden-sun.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; height: 16rem;"></div>
