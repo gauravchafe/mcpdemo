@@ -2,7 +2,7 @@
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="#"><img src="img/logo.png" alt=""></a>
+        <a href="#"><img src="./assets/images//logo.png" alt=""></a>
     </div>
     <div class="humberger__menu__cart">
         <ul>
@@ -13,11 +13,11 @@
     </div>
     <div class="humberger__menu__widget">
         <div class="header__top__right__language">
-            <img src="img/language.png" alt="">
+            <img src="./assets/images//language.png" alt="">
             <div>English</div>
             <span class="arrow_carrot-down"></span>
             <ul>
-                <li><a href="#">Spanis</a></li>
+                <li><a href="#">Spanish</a></li>
                 <li><a href="#">English</a></li>
             </ul>
         </div>
@@ -27,19 +27,52 @@
     </div>
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./shop-grid.html">Shop</a></li>
-            <li><a href="#">Pages</a>
-                <ul class="header__menu__dropdown">
-                    <li><a href="./shop-details.html">Shop Details</a></li>
-                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li>
-                    <li><a href="./blog-details.html">Blog Details</a></li>
-                </ul>
-            </li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
+            {%- assign html_pages = site.html_pages | sort: 'weight' -%}
+            {%- assign filtered_pages = "" | split: "" -%}
+      
+            {%- for html_page in html_pages -%} 
+      
+              {%- assign exclude = false -%}
+      
+              {%- for exclude_path in site.nav_exclude -%}
+      
+                {%- if exclude_path == html_page.path -%}
+                  {%- assign exclude = true -%}
+                  {%- break -%}
+                {%- elsif exclude_path contains '**' -%}
+                  {%- assign match = exclude_path | remove: '**' -%}
+                  {%- if html_page.path contains match -%}
+                    {%- assign exclude = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endif -%}
+      
+              {%- endfor -%}
+      
+              {%- unless exclude -%}
+                {%- assign filtered_pages = filtered_pages | push: html_page -%}
+              {%- endunless -%}
+      
+            {%- endfor -%}
+      
+            {% for html_page in filtered_pages %}  
+      
+              {%- if page.url contains html_page.url -%}
+                {%- assign active_status = "active" -%}
+              {%- else -%}
+                {%- assign active_status = "" -%}
+              {%- endif -%}
+      
+              {%- if html_page.external_url -%}
+                {%- assign url = html_page.external_url -%}
+              {%- else -%}
+                {%- assign url = html_page.url | relative_url -%}
+              {%- endif -%}
+      
+              <li><a class="{{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}>{{ html_page.title }}</a></li>
+      
+            {% endfor %}
+          </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
     <div class="header__top__right__social">
