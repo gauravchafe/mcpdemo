@@ -5,7 +5,7 @@ permalink: /contact/
 weight: 3
 ---
 
-# **Contact Me**
+# **Contact**
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
 {{ site.description }}
