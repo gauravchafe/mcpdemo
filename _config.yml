@@ -55,7 +55,7 @@ permalink: /blog/:title
 collections:
   projects:
     output: true
-    permalink: /snippets/:name
+    permalink: /shop/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
 

@@ -5,7 +5,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer__about">
                   <div class="footer__about__logo">
-                      <a href="./index.html"><span class="logo">{{ site.title }}</span>/a>
+                      <a href="./index.html"><span class="logo">{{ site.title }}</span></a>
                   </div>
                   <ul>
                       <li>Address: 60-49 Road 11378 New York</li>
@@ -43,12 +43,7 @@
                       <input type="text" placeholder="Enter your mail">
                       <button type="submit" class="site-btn">Subscribe</button>
                   </form>
-                  <div class="footer__widget__social">
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </div>
+                  {% include social.html %}
               </div>
           </div>
       </div>
@@ -58,7 +53,7 @@
                   <div class="footer__copyright__text"><p>
                     Demo site developed by <strong>{{ site.author.name }}</strong>
                     </p></div>
-                    <div class="footer__copyright__payment">{% include social.html %}</div>
+                    <div class="footer__copyright__payment"></div>
               </div>
           </div>
       </div>
