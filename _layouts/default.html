@@ -6,14 +6,19 @@
   https://github.com/yousinix/portfolYOU
 -->
 
-<html lang="en" class="h-100">
+<html lang="en">
 
   <head>
     {% include head.html %}
   </head>
 
-  <body class="h-100 d-flex flex-column">
-    <header>
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+    {% include mobilenav.html %}
+    <header class="header">
       {% include navbar.html %}
     </header>
     <main class="flex-shrink-0 container-fluid px-0 bg-secondary-subtle">
