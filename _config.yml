@@ -2,8 +2,7 @@
 title               : Shop Grocery
 subtitle            : Marketing Cloud Personalization Demo Site
 description         : Demo site to demonstrate MCP features
-baseurl             : "https://gauravchafe.github.io/mcpdemo/"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : gauravchafe/gauravchafe.github.io   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+baseurl             : "mcpdemo/"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 remote_theme        : 
 open_new_tab        : true                     # Opens external URLs in new tab (works for posts, projects and navbar only)
 
