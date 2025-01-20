@@ -30,7 +30,7 @@
     <div class="blog__item__pic">
       <img src="img/blog/blog-4.jpg" alt="">
     </div>
-    <a href="{{ post_url }}" class="post" {%- if post.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}></a>
+    <a href="{{ post_url }}" class="post" {%- if post.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}>
       <div class="blog__item__text">
           <ul>
               <li><i class="fa fa-calendar-o"></i> {{ post.date | date_to_long_string }}</li>
