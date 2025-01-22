@@ -1,7 +1,8 @@
 ### Site Settings ###
 title               : Shop Grocery
 subtitle            : Marketing Cloud Personalization Demo Site
-description         : Demo site to demonstrate MCP features
+description         : >-
+                        Demo site to demonstrate MCP features
 email               : hello@shopgrocery.com
 phone               : +65 11.188.888
 baseurl             : "mcpdemo/"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
