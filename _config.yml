@@ -4,7 +4,6 @@ subtitle            : Marketing Cloud Personalization Demo Site
 description         : Demo site to demonstrate MCP features
 email               : hello@shopgrocery.com
 phone               : +65 11.188.888
-promo               : Free Shipping for all Order of $99
 baseurl             : "mcpdemo/"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 remote_theme        : 
 open_new_tab        : true                     # Opens external URLs in new tab (works for posts, projects and navbar only)
