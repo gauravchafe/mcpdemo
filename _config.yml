@@ -1,11 +1,12 @@
 ### Site Settings ###
 title               : Shop Grocery
 subtitle            : Marketing Cloud Personalization Demo Site
-description         : >-
-                      Demo site to demonstrate MCP features
-baseurl             : ""                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository          : gauravchafe/gauravchafe.github.io   # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : yousinix/portfolYOU@v2.3.0
+description         : Demo site to demonstrate MCP features
+email               : hello@shopgrocery.com
+phone               : +65 11.188.888
+promo               : Free Shipping for all Order of $99
+baseurl             : "mcpdemo/"                        # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+remote_theme        : 
 open_new_tab        : true                     # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -27,12 +28,12 @@ author:
   name              : Gaurav Chafe
   image             : https://gauravchafe.github.io/assets/images/gauravchafe.jpg
 #  behance           : your_username
-#  dribbble          : your_username
+# dribbble          : your_username
 #  email             : username@domain.com
 #  facebook          : 
 #  github            : gauravchafe
 # gitlab            : your_username
-#  instagram         : 
+# instagram          : 
 # kaggle            : your_username
 #  linkedin          : 
 # medium            : your_username
@@ -43,7 +44,7 @@ author:
 # twitch            : your_username
 #  twitter           : 
 # vimeo             : your_username
-#  youtube           :  
+# youtube           :  
 # keybase           : your_username
 
 
