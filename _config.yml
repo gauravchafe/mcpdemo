@@ -21,6 +21,8 @@ nav_exclude:                                    # The following paths are exclud
   - pages/404.html
   - pages/cart.html
   - pages/checkout.html
+  - pages/login.html
+  - pages/wishlist.html
   - documentation/partials/**                   # For Documentation Only
 
 
